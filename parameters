@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "This is the first parameter: $1"
+echo "This is the second parameter: $2"

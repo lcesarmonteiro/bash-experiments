@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for i in 1 2 3 
+do
+case $i in
+    1) echo "First option";;
+    2) echo "Second option";;
+    3) echo "Third option";;
+esac
+done

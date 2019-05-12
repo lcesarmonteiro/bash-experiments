@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$name"]
+	then 
+		echo "You didn't tell us your name :("
+	else
+		echo "Hello, $name"
+fi
+
+[[ ! -z "$var" ]] && echo "This is never met" || echo "This is a ternary operator"
+[ -z "$var" ] && echo "This also works"
+[ -z "${var+set}" ] && echo "\$var is unset"

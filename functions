@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function_that_returns_value(){
+    local local_variable="some value"
+    echo $local_variable
+}
+
+returned_value=$(function_that_returns_value)
+
+echo $returned_value
+
+function_with_arguments(){
+    echo "$0" received the argument $1
+}
+
+function_with_arguments "Argument 1"

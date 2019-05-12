@@ -1,0 +1,23 @@
+#!/bin/bash
+
+IN="some;colon;separated;text"
+IFS=";" read -ra ADDR <<< "$IN"
+
+for i in ${ADDR[@]}
+do
+    echo $i
+done
+
+text="split this on whitespace"
+IFS=" " read -ra parts <<< "$text"
+echo ">> ${parts[3]}"
+
+results=$(ls -la)
+#IFS="\n" read -ra ADDR <<< "$results"
+# readarray -t ADDR <<< "$results"
+IFS=$'\n' read -ra ADDR -d $'\0' <<< "$results"
+
+for i in "${ADDR[@]}"
+do
+    echo "$i"
+done
