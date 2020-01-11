@@ -1,0 +1,5 @@
+#!/bin/bash
+
+run_on_background () {    
+    nohup $@ </dev/null &>/dev/null &
+}
