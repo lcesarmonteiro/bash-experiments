@@ -3,3 +3,7 @@
 run_on_background () {    
     nohup $@ </dev/null &>/dev/null &
 }
+
+kill_port () {s
+    kill $(lsof -t -i:$1)
+}
