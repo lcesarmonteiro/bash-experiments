@@ -8,3 +8,13 @@ case $i in
     3) echo "Third option";;
 esac
 done
+
+# unset IFS
+build_args () {
+    args=() 
+    for var in $(compgen -e | grep RDSL); do
+        args+="$var=${!var}"
+    done
+
+    echo "docker build $args ."
+}
