@@ -18,3 +18,6 @@ build_args () {
 
     echo "docker build $args ."
 }
+
+
+# var=$(build_args)
